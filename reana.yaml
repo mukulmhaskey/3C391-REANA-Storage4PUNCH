@@ -1,0 +1,26 @@
+version: 0.3.0
+inputs:
+  files:
+    - wsclean.sh
+    - J0614+6108-sp0.ms
+    - J0614+6108-sp1.ms
+    - J0614+6108-sp3.ms
+    - all_pybdsf.py
+    - plot.py
+
+workflow:
+  type: serial
+  specification:
+    steps:
+      - name: makeimage
+        environment: 'docker.io/astronrd/linc:latest'
+        commands:
+        - ./wsclean.sh
+        - ls *image.fits > list_images.txt
+        - python3 all_pybdsf.py
+           
+      - name: listobs&makeplot
+        environment: 'docker.io/mukulmhaskey/casa6modular:2.0'
+        commands:
+        - python3.6 listobs_eg.py
+        - python3.6 plot.py
