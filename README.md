@@ -2,7 +2,7 @@
 
 In this test case we demonstrate the use of REANA for reduction and data analysis of radio interferometric data. We use the standard data reduction software the CASA and Wsclean for calibration and imaging of raw measurement set obtained from VLA. The sample dataset is a supernova remnant observed at xx GHz. Refer to the following pages to get more details for the reduction and analysis procedure. For casa-- link, for wsclean-- link.  
 
-The resultant images are Flexible image transfer system (fits) files which can be viewed using softwares  like casa and ds9. We then use python packages of matplotlib and astropy to create 'png' images from these fits files (link). In the last step a source finder catalog called PyBdsf is used to get the coordinates, flux measurements, sizes and other common properties for sources in the image. 
+The resultant images are Flexible image transfer system (fits) files which can be viewed using softwares  like casa and ds9. We then use python packages of matplotlib and astropy to create 'png' images from these fits files (link). In the last step a source finder catalog called PyBdsf is used to get the coordinates, flux measurements, sizes and other common properties for sources in the image. All the softwares and their dependencies used here are stored in a docker file that is acessed via a environment variable in the yaml file.
 
 Along with the different codes for analysis, this github page contains the yaml file that has the instructions to run the REANA instance. The user can modify the codes as per their own preferences. Also, please refer to the following example for instructions to create a general yaml file and run a basic REANA instance (link). 
 
