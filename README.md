@@ -31,11 +31,11 @@ Follow this step by step guide to complete the tutorial:
 #connect storage4punch to reana using the key
 .
 
-# create user and upload data in storage4punch
+#create user and upload data in storage4punch
 .
 #check the data in storage4punch
 .
-# create the workspace and upload the yaml, davix commands and the code files (dont forget to modify the davix files according to the filepath provided)
+#create the workspace and upload the yaml, davix commands and the code files (dont forget to modify the davix files according to the filepath provided)
 .
 .
 #start the workspace
