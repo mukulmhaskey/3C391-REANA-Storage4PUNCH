@@ -19,8 +19,20 @@ Description of files:
 Follow this step by step guide to complete the tutorial:
 *** Commands with instructions and comments with #)***
 #connect to the storage4punch using oidc agent (see instructions here)
+```sh
+  eval `oidc-agent`
+  ```
+oidc-add <ACCOUNT-Name>
+```sh
+  oidc-add <ACCOUNT-Name>
+  ```
+replace <ACCOUNT-Name> with the name that you choose during setup
+```sh
+  export BEARER_TOKEN=$(oidc-token <ACCOUNT-Name>)
+  ```
 .
 .
+_For more examples, please refer to the [Documentation](https://example.com)_
 .
 #generate key 
 .
