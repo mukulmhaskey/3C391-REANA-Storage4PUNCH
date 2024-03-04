@@ -37,22 +37,28 @@ For more examples, please refer to the [Documentation](https://example.com)
 
 ##generate key 
 .
+
 ##start the reana instance at aip
 .
 .
 .
+
 ##connect storage4punch to reana using the key
 .
 
 ##create user and upload data in storage4punch
 .
+
 ##check the data in storage4punch
 .
+
 ##create the workspace and upload the yaml, davix commands and the code files (dont forget to modify the davix files according to the filepath provided)
 .
 .
+
 ##start the workspace
 .
+
 ##check the results in storage4punch
 .
 
