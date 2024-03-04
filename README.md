@@ -32,7 +32,7 @@ replace <ACCOUNT-Name> with the name that you choose during setup
   ```
 .
 .
-_For more examples, please refer to the [Documentation](https://example.com)_
+For more examples, please refer to the [Documentation](https://example.com)_
 .
 #generate key 
 .
