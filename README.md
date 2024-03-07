@@ -30,11 +30,11 @@ Follow this step by step guide to complete the tutorial:
 eval `oidc-agent`
 oidc-add <ACCOUNT-Name>
 oidc-add <ACCOUNT-Name>
-   ```
-replace <ACCOUNT-Name> with the name that you choose during setup
-```sh
-   export BEARER_TOKEN=$(oidc-token <ACCOUNT-Name>)
-   ```
+# replace <ACCOUNT-Name> with the name that you choose during setup
+export BEARER_TOKEN=$(oidc-token <ACCOUNT-Name>)
+# create user and upload data in storage4punch
+#check the data in storage4punch
+```
 start the reana client on the local machine
 ```sh
    virtualenv ~/.virtualenvs/reana
@@ -42,42 +42,24 @@ start the reana client on the local machine
    ```
 start the reana instance at aip
 ```sh
-   export REANA_SERVER_URL=https://reana-p4n.aip.de
-   export REANA_ACCESS_TOKEN=XXXXXXXXXXXXX
-   ```
-generate key to connect storage4punch with reana
-```sh
-   reana-client secrets-add --env BEARER_TOKEN=$BEARER_TOKEN
-   ```
-create a new workflow
-```sh
-   reana-client create -n myanalysis
-   export REANA_WORKON=myanalysis
-# upload input code and workflow to the workspace
-   reana-client upload
-# start computational workflow
-   reana-client start
-   ```
+export REANA_SERVER_URL=https://reana-p4n.aip.de
+export REANA_ACCESS_TOKEN=XXXXXXXXXXXXX
 
+# generate key to connect storage4punch with reana
+
+reana-client secrets-add --env BEARER_TOKEN=$BEARER_TOKEN
+
+#create a new workflow
+reana-client create -n myanalysis
+export REANA_WORKON=myanalysis
+# upload input codes and workflow to the workspace (dont forget to modify the davix files with the suitable user provided filepath)
+reana-client upload
+# start computational workflow
+reana-client start
+
+# After completion check the results in storage4punch or download the files on local computer
+```
 
 For more examples, please refer to the [Documentation](https://example.com)
 
-
-##create user and upload data in storage4punch
-.
-
-##check the data in storage4punch
-.
-
-##create the workspace and upload the yaml, davix commands and the code files (dont forget to modify the davix files according to the filepath provided)
-.
-.
-
-##start the workspace
-.
-
-##check the results in storage4punch
-.
-
-
-##The following approach was adopted to generate radio fits files and source catalogs for 12 targets (compact radio galaxies) observed with the VLA at frequencies ranging from 1 to 8GHz (xx files in total). The results will be combined with observations using the GMRT to produce SEDs for these 12 compact radio galaxies with seamless coverage from 0.1 to 8 GHz. Results will be published in (Mhaskey et al, in preparation)
+##The above approach was adopted to generate radio fits files and source catalogs for 12 targets (compact radio galaxies) observed with the VLA at frequencies ranging from 1 to 8GHz (xx files in total). The results will be combined with observations using the GMRT to produce SEDs for these 12 compact radio galaxies with seamless coverage from 0.1 to 8 GHz. Results will be published in (Mhaskey et al, in preparation)
