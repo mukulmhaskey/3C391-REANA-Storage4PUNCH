@@ -61,7 +61,6 @@ reana-client start
 # After completion check the results in storage4punch
 # or download the files on the local computer
 ```
-
-For more examples, please refer to the [Documentation](https://example.com)
+For more details on installing and running reana, go to the following [page](https://reanahub.io/) and refer to some examples.
 
 ##The above approach was adopted to generate radio fits files and source catalogs for 12 targets (compact radio galaxies) observed with the VLA at frequencies ranging from 1 to 8GHz (xx files in total). The results will be combined with observations using the GMRT to produce SEDs for these 12 compact radio galaxies with seamless coverage from 0.1 to 8 GHz. Results will be published in (Mhaskey et al, in preparation)
