@@ -24,13 +24,12 @@ _Description of files:_
 
 Follow this step by step guide to complete the tutorial:
 *** Commands with instructions and comments with #)***
+
 #connect to the storage4punch using oidc agent (see instructions here)
 ```sh
-   eval `oidc-agent`
-   ```
+eval `oidc-agent`
 oidc-add <ACCOUNT-Name>
-```sh
-   oidc-add <ACCOUNT-Name>
+oidc-add <ACCOUNT-Name>
    ```
 replace <ACCOUNT-Name> with the name that you choose during setup
 ```sh
