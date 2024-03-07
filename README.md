@@ -37,18 +37,13 @@ export BEARER_TOKEN=$(oidc-token <ACCOUNT-Name>)
 ```
 start the reana client on the local machine
 ```sh
-   virtualenv ~/.virtualenvs/reana
-   source ~/.virtualenvs/reana/bin/activate
-   ```
-start the reana instance at aip
-```sh
+virtualenv ~/.virtualenvs/reana
+source ~/.virtualenvs/reana/bin/activate
+#start the reana instance at aip
 export REANA_SERVER_URL=https://reana-p4n.aip.de
 export REANA_ACCESS_TOKEN=XXXXXXXXXXXXX
-
 # generate key to connect storage4punch with reana
-
 reana-client secrets-add --env BEARER_TOKEN=$BEARER_TOKEN
-
 #create a new workflow
 reana-client create -n myanalysis
 export REANA_WORKON=myanalysis
@@ -56,8 +51,8 @@ export REANA_WORKON=myanalysis
 reana-client upload
 # start computational workflow
 reana-client start
-
-# After completion check the results in storage4punch or download the files on the local computer
+# After completion check the results in storage4punch
+# or download the files on the local computer
 ```
 
 For more examples, please refer to the [Documentation](https://example.com)
