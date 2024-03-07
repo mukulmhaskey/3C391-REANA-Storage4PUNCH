@@ -20,7 +20,8 @@ _Description of files:_
 6) pybdsf.py-- Generate the source catalog from the fits image 
 7) storage4punch_to_REANA.sh-- command to download data from storage4punch to REANA
 8) REANA_to_storage4punch.sh-- command to upload results to storage4punch from REANA
-9) 3c391_ctm_mosaic_10s_spw0.ms.tgz-- Compressed measurement set
+9) 3c391_ctm_mosaic_10s_spw0.ms.tgz1-- Compressed measurement set (to be stored on storage4punch)
+   Download from [here](http://casa.nrao.edu/Data/EVLA/3C391/3c391_ctm_mosaic_10s_spw0.ms.tgz)
 
 Follow this step by step guide to complete the tutorial:
 *** Commands with instructions and comments with #)***
@@ -32,10 +33,10 @@ oidc-add <ACCOUNT-Name>
 oidc-add <ACCOUNT-Name>
 # replace <ACCOUNT-Name> with the name that you choose during setup
 export BEARER_TOKEN=$(oidc-token <ACCOUNT-Name>)
-# create user, directory 
-davix-mkdir -k -H "Authorization: Bearer ${BEARER_TOKEN}" https://dcache-desy-webdav.desy.de:2880//pnfs/desy.de/punch/user/username
+# create user/directory 
+davix-mkdir -k -H "Authorization: Bearer ${BEARER_TOKEN}" https://dcache-desy-webdav.desy.de:2880//pnfs/desy.de/punch/mukul/3c391
 # upload data in storage4punch
-davix-put -k yourdata -H "Authorization: Bearer ${BEARER_TOKEN}" https://dcache-desy-webdav.desy.de:2880//pnfs/desy.de/punch/user/username/yourdata
+davix-put -k 3c391_ctm_mosaic_10s_spw0.ms.tgz1 -H "Authorization: Bearer ${BEARER_TOKEN}" https://dcache-desy-webdav.desy.de:2880//pnfs/desy.de/punch/mukul/3c391/3c391_ctm_mosaic_10s_spw0.ms.tgz1 3c391_ctm_mosaic_10s_spw0.ms.tgz1
 #check the data in storage4punch
 davix-ls -k -l -H "Authorization: Bearer ${BEARER_TOKEN}" https://dcache-desy-webdav.desy.de:2880//pnfs/desy.de/punch/user/username
 ```
@@ -45,7 +46,7 @@ start the reana client on the local machine
 ```sh
 virtualenv ~/.virtualenvs/reana
 source ~/.virtualenvs/reana/bin/activate
-#start the reana instance at aip
+#start the reana instance at AIP
 export REANA_SERVER_URL=https://reana-p4n.aip.de
 export REANA_ACCESS_TOKEN=XXXXXXXXXXXXX
 # generate key to connect storage4punch with reana
