@@ -32,9 +32,14 @@ oidc-add <ACCOUNT-Name>
 oidc-add <ACCOUNT-Name>
 # replace <ACCOUNT-Name> with the name that you choose during setup
 export BEARER_TOKEN=$(oidc-token <ACCOUNT-Name>)
-# create user and upload data in storage4punch
+# create user, directory 
+davix-mkdir -k -H "Authorization: Bearer ${BEARER_TOKEN}" https://dcache-desy-webdav.desy.de:2880//pnfs/desy.de/punch/user/username
+# upload data in storage4punch
+davix-put -k yourdata -H "Authorization: Bearer ${BEARER_TOKEN}" https://dcache-desy-webdav.desy.de:2880//pnfs/desy.de/punch/user/username/yourdata
 #check the data in storage4punch
+davix-ls -k -l -H "Authorization: Bearer ${BEARER_TOKEN}" https://dcache-desy-webdav.desy.de:2880//pnfs/desy.de/punch/user/username
 ```
+For more details on storage4punch and commands follow the PUNCH4NDI TA2 page for [StoragePrototyping](https://intra.punch4nfdi.de/?md=/docs/TA2/WP1/StoragePrototyping.md)
 start the reana client on the local machine
 ```sh
 virtualenv ~/.virtualenvs/reana
