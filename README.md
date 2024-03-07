@@ -52,12 +52,12 @@ reana-client secrets-add --env BEARER_TOKEN=$BEARER_TOKEN
 #create a new workflow
 reana-client create -n myanalysis
 export REANA_WORKON=myanalysis
-# upload input codes and workflow to the workspace (dont forget to modify the davix files with the suitable user provided filepath)
+# update and upload input codes and workflow to the workspace
 reana-client upload
 # start computational workflow
 reana-client start
 
-# After completion check the results in storage4punch or download the files on local computer
+# After completion check the results in storage4punch or download the files on the local computer
 ```
 
 For more examples, please refer to the [Documentation](https://example.com)
