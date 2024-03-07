@@ -26,31 +26,43 @@ Follow this step by step guide to complete the tutorial:
 *** Commands with instructions and comments with #)***
 #connect to the storage4punch using oidc agent (see instructions here)
 ```sh
-  eval `oidc-agent`
-  ```
+   eval `oidc-agent`
+   ```
 oidc-add <ACCOUNT-Name>
 ```sh
-  oidc-add <ACCOUNT-Name>
-  ```
+   oidc-add <ACCOUNT-Name>
+   ```
 replace <ACCOUNT-Name> with the name that you choose during setup
 ```sh
-  export BEARER_TOKEN=$(oidc-token <ACCOUNT-Name>)
-  ```
-.
-.
+   export BEARER_TOKEN=$(oidc-token <ACCOUNT-Name>)
+   ```
+start the reana client on the local machine
+```sh
+   virtualenv ~/.virtualenvs/reana
+   source ~/.virtualenvs/reana/bin/activate
+   ```
+start the reana instance at aip
+```sh
+   export REANA_SERVER_URL=https://reana-p4n.aip.de
+   export REANA_ACCESS_TOKEN=XXXXXXXXXXXXX
+   ```
+generate key to connect storage4punch with reana
+```sh
+   reana-client secrets-add --env BEARER_TOKEN=$BEARER_TOKEN
+   ```
+create a new workflow
+```sh
+   reana-client create -n myanalysis
+   export REANA_WORKON=myanalysis
+# upload input code and workflow to the workspace
+   reana-client upload
+# start computational workflow
+   reana-client start
+   ```
+
+
 For more examples, please refer to the [Documentation](https://example.com)
 
-
-##generate key 
-.
-
-##start the reana instance at aip
-.
-.
-.
-
-##connect storage4punch to reana using the key
-.
 
 ##create user and upload data in storage4punch
 .
