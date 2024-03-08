@@ -1,6 +1,6 @@
-# 3C391: A Storage4PUNCH-REANA test case for data reduction and analysis
+# 3C391: A Storage4PUNCH-REANA use-case for data reduction and analysis
 <!-- ABOUT THE PROJECT -->
-In this test case, we demonstrate the use of REANA for the reduction and data analysis of radio interferometric data, along with the integration between Storage4PUNCH and REANA. 
+In this use-case, we demonstrate the use of REANA for the reduction and data analysis of radio interferometric data, along with the integration between Storage4PUNCH and REANA. 
 
 We use the standard data reduction software [CASA](https://casadocs.readthedocs.io/en/v6.2.0/notebooks/usingcasa.html/) and [wsclean](https://wsclean.readthedocs.io/en/latest/) for calibration and imaging of raw measurement set obtained from Karl G. Jansky Very Large Array (VLA). The sample dataset is a supernova remnant [3C391](http://simbad.u-strasbg.fr/simbad/sim-id?Ident=3C+391&NbIdent=1&Radius=2&Radius.unit=arcmin&submit=submit+id) observed at 4.5 GHz. Refer to the NRAO [casa-guide](https://casaguides.nrao.edu/index.php?title=VLA_Continuum_Tutorial_3C391-CASA6.4.1) to get more details for the reduction and analysis procedure. The resultant images are Flexible image transfer system (fits) files which can be viewed using software like CASA and ds9. We then use Python packages of 'matplotlib' and 'astropy' to create 'png' images from these fits files. In the last step, a source catalogue is generated using [PyBDSF](https://pybdsf.readthedocs.io/en/latest/index.html) to get the coordinates, flux measurements, sizes and other common properties for sources in the image. All the software and their dependencies used here are stored in docker files that are accessed via an environment variable in the 'yaml' file.
 
