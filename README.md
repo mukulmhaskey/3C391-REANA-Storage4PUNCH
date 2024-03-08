@@ -1,6 +1,9 @@
 # reana_demo_radio
+<!-- ABOUT THE PROJECT -->
 
-In this test case, we demonstrate the use of REANA for the reduction and data analysis of radio interferometric data, and also linkage between storage4punch and REANA. We use the standard data reduction software the CASA and Wsclean for calibration and imaging of raw measurement set obtained from VLA. The sample dataset is a supernova remnant observed at xx GHz. Refer to the NRAO [casa-guide](https://casaguides.nrao.edu/index.php?title=VLA_Continuum_Tutorial_3C391-CASA6.4.1) to get more details for the reduction and analysis procedure. For [casa](https://casadocs.readthedocs.io/en/v6.2.0/notebooks/usingcasa.html/) , [wsclean](https://wsclean.readthedocs.io/en/latest/).  
+##In this test case, we demonstrate the use of REANA for the reduction and data analysis of radio interferometric data, along with the integration between storage4punch and REANA. 
+
+We use the standard data reduction software the CASA and Wsclean for calibration and imaging of raw measurement set obtained from VLA. The sample dataset is a supernova remnant observed at xx GHz. Refer to the NRAO [casa-guide](https://casaguides.nrao.edu/index.php?title=VLA_Continuum_Tutorial_3C391-CASA6.4.1) to get more details for the reduction and analysis procedure. For [casa](https://casadocs.readthedocs.io/en/v6.2.0/notebooks/usingcasa.html/) , [wsclean](https://wsclean.readthedocs.io/en/latest/).  
 
 The resultant images are Flexible image transfer system (fits) files which can be viewed using softwares  like casa and ds9. We then use python packages of matplotlib and astropy to create 'png' images from these fits files (link). In the last step a source finder catalog called [PyBDSF](https://pybdsf.readthedocs.io/en/latest/index.html) is used to get the coordinates, flux measurements, sizes and other common properties for sources in the image. All the softwares and their dependencies used here are stored in a docker file that is accessed via an environment variable in the yaml file.
 
