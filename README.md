@@ -63,7 +63,7 @@ For more details on installing and running reana, go to the following [page](htt
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="results/plot_3c391.png" alt="Logo" width="600" height="500">
+    <img src="results/plot_3c391_casa.png" alt="Logo" width="600" height="500">
   </a>
   <h3 align="center">Result image: Supernova remnant 3C391</h3>
    
