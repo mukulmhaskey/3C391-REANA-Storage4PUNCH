@@ -1,4 +1,4 @@
-# reana_demo_radio
+# 3C391: A Storage4PUNCH-REANA test case for data reduction and analysis
 <!-- ABOUT THE PROJECT -->
 In this test case, we demonstrate the use of REANA for the reduction and data analysis of radio interferometric data, along with the integration between Storage4PUNCH and REANA. 
 
