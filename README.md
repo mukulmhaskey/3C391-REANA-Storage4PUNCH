@@ -10,11 +10,11 @@ The measurement dataset is uploaded on the Storage4PUNCH archive and can be acce
 
 _Description of files:_
 1) reana.yaml-- yaml setup file for REANA
-2) pipeline_casa.py-- pipeline for calibration and imaging of raw dataset using CASA
-3) plot_casa_image.py-- Generate png image from fits file (CASA imaging)
-4) wsclean.sh-- Imaging of calibrated dataset using WSCLEAN
-5) plot_wsclean_image.py-- Generate png image from fits file (WSCLEAN imaging)
-6) pybdsf.py-- Generate the source catalog from the fits image 
+2) pipeline_casa.py-- pipeline for calibration and imaging of raw dataset using CASA (generates a calibrated dataset and final fits image)
+3) plot_casa_image.py-- Generate png image from fits file using 'matplotlib' and 'astropy' (CASA imaging)
+4) wsclean.sh-- Imaging of calibrated dataset using WSCLEAN (uses the calibrated dataset generated from CASA pipeline for imaging)
+5) plot_wsclean_image.py-- Generate png image from fits file using 'matplotlib' and 'astropy' (WSCLEAN imaging)
+6) pybdsf.py-- Generate the source catalog from the fits image using PyBDSF
 7) storage4punch_to_REANA.sh-- command to download data from storage4punch to REANA
 8) REANA_to_storage4punch.sh-- command to upload results to storage4punch from REANA
 9) 3c391_ctm_mosaic_10s_spw0.ms.tgz1-- Compressed measurement set (to be stored on Storage4PUNCH)
