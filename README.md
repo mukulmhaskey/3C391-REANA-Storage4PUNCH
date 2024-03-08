@@ -22,7 +22,7 @@ _Description of files:_
 
 Follow this step-by-step guide to complete the tutorial:
 
-#connect to the Storage4PUNCH using oidc agent, see instructions [here](https://intra.punch4nfdi.de/?md=/docs/TA2/WP1/StoragePrototyping.md)
+Connect to the Storage4PUNCH using oidc agent, see instructions [here](https://intra.punch4nfdi.de/?md=/docs/TA2/WP1/StoragePrototyping.md)
 ```sh
 eval `oidc-agent`
 oidc-add <ACCOUNT-Name>
@@ -38,7 +38,7 @@ davix-ls -k -l -H "Authorization: Bearer ${BEARER_TOKEN}" https://dcache-desy-we
 ```
 For more details on Storage4PUNCH and commands follow the PUNCH4NDI TA2 page for [StoragePrototyping](https://intra.punch4nfdi.de/?md=/docs/TA2/WP1/StoragePrototyping.md)
 
-start the reana client on the local machine
+Start the reana client on the local machine
 ```sh
 virtualenv ~/.virtualenvs/reana
 source ~/.virtualenvs/reana/bin/activate
