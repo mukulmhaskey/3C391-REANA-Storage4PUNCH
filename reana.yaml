@@ -1,26 +1,42 @@
 version: 0.3.0
 inputs:
   files:
+    - storage4punch_to_REANA.sh
+    - pipeline_casa.py
     - wsclean.sh
-    - J0614+6108-sp0.ms
-    - J0614+6108-sp1.ms
-    - J0614+6108-sp3.ms
-    - all_pybdsf.py
-    - plot.py
+    - plot_casa_image.py
+    - plot_wsclean_image.py
+    - pybdsf.py
+    - REANA_to_storage4punch.sh
 
 workflow:
   type: serial
   specification:
     steps:
-      - name: makeimage
+      - name: import_from_storage4_punch
+        environment: 'docker.io/mukulmhaskey/casapip6.5:3.0'
+        commands:
+        - ./storage4punch_to_REANA.sh
+                   
+      - name: makeimage_casa
+        environment: 'docker.io/mukulmhaskey/casapip6.5:3.0'
+        commands:
+        - tar zxvf 3c391_ctm_mosaic_10s_spw0.ms.tgz.1 
+        - casa --nologger -nogui --log2term -nologfile -c "pipeline_casa.py"
+        
+      - name: makeimage_wsclean
         environment: 'docker.io/astronrd/linc:latest'
         commands:
         - ./wsclean.sh
-        - ls *image.fits > list_images.txt
-        - python3 all_pybdsf.py
-           
-      - name: listobs&makeplot
-        environment: 'docker.io/mukulmhaskey/casa6modular:2.0'
+
+      - name: makeplot&source_catalog
+        environment: 'docker.io/mukulmhaskey/casapip6.5:3.0'
         commands:
-        - python3.6 listobs_eg.py
-        - python3.6 plot.py
+        - python3 plot_casa_image.py
+        - python3 plot_wsclean_image.py
+        - python3 pybdsf.py    
+        
+      - name: export_files_to_storage4punch
+        environment: 'docker.io/mukulmhaskey/casapip6.5:3.0'
+        commands:
+        - ./REANA_to_storage4punch.sh
