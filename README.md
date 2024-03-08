@@ -65,7 +65,7 @@ For more details on installing and running reana, go to the following [page](htt
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="results/plot_3c391_wsclean.png" alt="Logo" width="700" height="500">
   </a>
-  <h3 align="center">Result image: Supernova remnant 3C391 (wsclean image))</h3>
+  <h3 align="center">Result image: Supernova remnant 3C391 (wsclean image)</h3>
    
 <div align="left">
 The above approach was adopted to generate radio fits files and source catalogs for 12 targets (compact radio galaxies) observed with the VLA at frequencies ranging from 1 to 8GHz (121 images). The results will be combined with observations using the GMRT to produce SEDs for these 12 compact radio galaxies with seamless coverage from 0.1 to 8 GHz. Results will be published in (Mhaskey et al, in preparation)
