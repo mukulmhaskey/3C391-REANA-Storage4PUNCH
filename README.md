@@ -20,9 +20,9 @@ _Description of files:_
 9) 3c391_ctm_mosaic_10s_spw0.ms.tgz1-- Compressed measurement set (to be stored on storage4punch)
    Download from [here](http://casa.nrao.edu/Data/EVLA/3C391/3c391_ctm_mosaic_10s_spw0.ms.tgz)
 
-Follow this step by step guide to complete the tutorial:
+Follow this step-by-step guide to complete the tutorial:
 
-#connect to the storage4punch using oidc agent [instructions](https://intra.punch4nfdi.de/?md=/docs/TA2/WP1/StoragePrototyping.md)
+#connect to the storage4punch using oidc agent, see instructions [here](https://intra.punch4nfdi.de/?md=/docs/TA2/WP1/StoragePrototyping.md)
 ```sh
 eval `oidc-agent`
 oidc-add <ACCOUNT-Name>
@@ -65,7 +65,7 @@ For more details on installing and running reana, go to the following [page](htt
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="plot_3c391.png" alt="Logo" width="600" height="500">
   </a>
-  <h3 align="center">Supernova remnant 3C391</h3>
+  <h3 align="center">Result image: Supernova remnant 3C391</h3>
    
 <div align="left">
 The above approach was adopted to generate radio fits files and source catalogs for 12 targets (compact radio galaxies) observed with the VLA at frequencies ranging from 1 to 8GHz (121 files). The results will be combined with observations using the GMRT to produce SEDs for these 12 compact radio galaxies with seamless coverage from 0.1 to 8 GHz. Results will be published in (Mhaskey et al, in preparation)
